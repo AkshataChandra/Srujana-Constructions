@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indian Construction Company | Projects & Team</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1565c0;
+      padding: 10px;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      margin: 0 15px;
+      cursor: pointer;
+      padding: 10px 15px;
+    }
+
+    nav button:hover {
+      background-color: #0d47a1;
+      border-radius: 5px;
+    }
+
+    section {
+      display: none;
+      padding: 20px;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #e3f2fd;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SUROJ BUILDERS & INFRA PVT. LTD.</h1>
+  <p>Committed to Building India's Future</p>
+</header>
+
+<nav>
+  <button onclick="showSection('ongoing')">Ongoing Projects</button>
+  <button onclick="showSection('completed')">Completed Projects</button>
+  <button onclick="showSection('team')">Our Team</button>
+  <button onclick="showSection('about')">About Us</button>
+</nav>
+
+<!-- Ongoing Projects Section -->
+<section id="ongoing" class="active">
+  <h2>Ongoing Projects</h2>
+  <div class="project-grid">
+    <div class="card">
+      <img src="https://engineeredsolutionsprojects.com/wp-content/uploads/2021/06/Steel-Portal-Frame-Building-for-Cranes-480x360.jpg" alt="Tarsons Howrah">
+      <div class="card-body">
+        <h3>TARSONS PRODUCTS LTD., HOWRAH, WB</h3>
+        <p>Industrial Building Construction</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.PEtQFTsSaz_H36UZtytQygHaFl?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Perstorp">
+      <div class="card-body">
+        <h3>PERSTORP INDUSTRIES, BHARUCH</h3>
+        <p>Process Plant Infrastructure</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Completed Projects Section -->
+<section id="completed">
+  <h2>Completed Projects</h2>
+  <div class="project-grid">
+    <div class="card">
+      <img src="https://www.manufacturingtodayindia.com/cloud/2024/06/26/Bajaj-Auto-establishes-its-manufacturing-plant-in-Brazil.jpg" alt="Bajaj Auto">
+      <div class="card-body">
+        <h3>BAJAJ AUTO, CHAKAN</h3>
+        <p>Auto Manufacturing Plant</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.N3pnov2DZt5si3s6W2TEigHaET?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Greenlam">
+      <div class="card-body">
+        <h3>GREENLAM INDUSTRIES, MENAKUR</h3>
+        <p>Wood Laminate Factory Infrastructure</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section id="team">
+  <h2>Our Leadership Team</h2>
+  <div class="project-grid">
+    <div class="card">
+      <div class="card-body">
+        <h3>Mr. R. Deshmukh</h3>
+        <p>Managing Director & CEO</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h3>Ms. A. Patel</h3>
+        <p>Head of Projects</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about">
+  <h2>About Our Company</h2>
+  <p>
+    With over 25+ years of experience and 180+ completed projects, SUROJ BUILDERS & INFRA PVT. LTD. has emerged as a leader in civil construction across India.
+    We are committed to engineering excellence, innovation, and timely delivery in sectors ranging from industrial, commercial to infrastructure.
+  </p>
+  <p>
+    Our values are rooted in integrity, customer satisfaction, and a deep commitment to quality. From using state-of-the-art machinery to adhering to the strictest safety standards, we ensure every project is a hallmark of excellence.
+  </p>
+</section>
+
+<footer>
+  © 2025 SUROJ BUILDERS & INFRA PVT. LTD. | All Rights Reserved.
+</footer>
+
+<script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(sectionId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
